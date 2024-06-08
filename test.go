@@ -38,17 +38,23 @@ import (
 
 func dublStr(x, s string) int {
 	count := 0
-	// j := len([]rune(x))
-	for strings.Contains(x, s) == true {
-		count++
 
+	for _, r := range s {
+		j := string(r)
+		if strings.Contains(x, j) == true {
+			count++
+		}
+
+		if count == 0 {
+			count = -1
+		}
 	}
 	return count
 }
 
 func main() {
-	x, s := "awesome", "es"
-	// fmt.Scan(&x, &s)
+	x, s := "", ""
+	fmt.Scan(&x, &s)
 	fmt.Println(dublStr(x, s))
 }
 
