@@ -2,61 +2,41 @@ package main
 
 import (
 	"fmt"
-	"strings"
 )
+
+func repeatString(str string) string {
+	rep := []rune(str)
+	d := rep[0]
+	// for _, r := range str {
+
+	// if  {
+	// rep += string(r + 1)
+	// } первый элемент проверяется на повтор. Если он повторяется, то удаляй и переходи на другой.
+	// }
+	return string(d)
+}
+
+func main() {
+	k := "zaabcbd"
+	fmt.Println(repeatString(k))
+}
 
 // func smallestNum(arr []int) []int {
 // 	a := arr[0]
 // 	chArr := []int{}
-// 	for i := 0; i < len(arr); {
-// 		if arr[i] < a {
-// 			chArr = append(chArr, arr[i])
-// 			// arr = delete(arr[i])
+// 	// for i := 0; i <= len(arr); {
+// 	for _, r := range arr {
+// 		if r < a {
+// 			chArr = append(chArr, r)
+
+// 		} else if len(chArr) == len(arr) {
+// 			arr[0] = 0
 // 		}
 // 	}
+// 	// }
+// 	// fmt.Println(arr)
 // 	return chArr
 // }
-
-// func main() {
-// 	arr := []int{14, 9, 1, 19, 7}
-// 	fmt.Println(smallestNum(arr))
-
-// }
-
-// func rightSring(str string) {
-// 	if strings.Contains(str, ".") {
-// 		fmt.Println("Right")
-// 	} else {
-// 		fmt.Println("Wrong")
-// 	}
-// 	// if unicode.IsUpper(str) == true && strings.Contains(string(str), ".") {
-// 	// 	fmt.Println("Right")
-// 	// } else {
-// 	// 	fmt.Println("Wrong")
-// 	// }
-// }
-
-func dublStr(x, s string) int {
-	count := 0
-
-	for _, r := range s {
-		j := string(r)
-		if strings.Contains(x, j) == true {
-			count++
-		}
-
-		if count == 0 {
-			count = -1
-		}
-	}
-	return count
-}
-
-func main() {
-	x, s := "", ""
-	fmt.Scan(&x, &s)
-	fmt.Println(dublStr(x, s))
-}
 
 // func evenSum(from, to int, ch chan int) {
 // 	result := 0
