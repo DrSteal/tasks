@@ -2,18 +2,29 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
 func repeatString(str string) string {
 	rep := []rune(str)
-	d := rep[0]
+	d := str
+	var k string
+	k = string(d[0])
+
+	str = strings.Replace(str, k, "", -1)
+	for i := 0; i < len(rep); i ++ {
+			if k = str[i] {
+				// проверяй первый символ. Если он повторяется удаляй
+			}
+	}
 	// for _, r := range str {
 
-	// if  {
-	// rep += string(r + 1)
-	// } первый элемент проверяется на повтор. Если он повторяется, то удаляй и переходи на другой.
+	// 	if d == r {
+	// 		strings.Trim(str, string(r))
+	// 	}
 	// }
-	return string(d)
+	// str = string(rep)
+	return string(str)
 }
 
 func main() {
